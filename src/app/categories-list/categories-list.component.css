@@ -1,0 +1,12 @@
+.text {
+    height: 55px;
+}
+
+.delete, .edit, .view {
+    /* margin-top: -8px; */
+    margin-left: 10px;
+}
+
+.head {
+    font-size: large;
+}

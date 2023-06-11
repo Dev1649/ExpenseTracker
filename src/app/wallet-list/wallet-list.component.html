@@ -1,0 +1,36 @@
+<div class="background">
+    <div class="mt-2">
+        <h1>Wallets</h1>
+    </div>
+
+    <div class="mt-3">
+        <label class="form-label head">Name of Wallet</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" [(ngModel)]="walletObject.name" required />
+    </div>
+
+    <div class="mt-3">
+        <label class="form-label head">Balance</label>
+        <input type="number" class="form-control" [(ngModel)]="walletObject.balance" required />
+    </div>
+
+    <div class="text-center mt-3">
+        <button class="btn btn-outline-info float-center" (click)="createWallet()" *ngIf="!isEdit">
+            <i class="fa fa-floppy-o" style="font-size: 50px;" aria-hidden="true"></i>
+        </button>
+        <button class="btn float-center btn-outline-success" (click)="updateWallet()" *ngIf="isEdit"><i class="fa fa-pencil" style="font-size: 50px;" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <br>
+
+    <h3 class="mt-4 text-center" *ngIf="finalList.length === 0">Wallets Are Empty</h3>
+
+    <div class="mb-2" *ngFor="let item of finalList; let i=index">
+        <li class="form-control input">
+            <span><b>{{item.name}}</b><br><b>Amount:</b>{{item.balance}}</span>
+            <button type="button" class="btn float-end btn-danger delete" (click)="deleteWallet(item)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+            <button type="button" class="btn float-end btn-success edit" (click)="editWallet(item)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <button type="button" class="btn float-end btn-secondary view" [routerLink]="['/expensies', item.key]"><i class="fa fa-eye" aria-hidden="true"></i></button>
+        </li>
+    </div>
+</div>

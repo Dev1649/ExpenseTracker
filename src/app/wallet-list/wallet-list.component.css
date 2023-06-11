@@ -1,0 +1,13 @@
+/* .input {
+    height: 90px;
+    background-color: #f8f9fa;
+} */
+
+.delete, .edit, .view {
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.head {
+    font-size: large;
+}

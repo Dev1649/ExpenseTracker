@@ -1,0 +1,18 @@
+.input {
+    height: 53px;
+    background-color: #f8f9fa;
+}
+
+.update {
+    background-color: #11c38a;
+    color: white;
+}
+
+.add {
+    background-color: #001aff;
+    color: white;
+}
+
+.head {
+    font-size: x-large;
+}

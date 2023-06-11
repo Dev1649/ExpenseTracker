@@ -1,0 +1,29 @@
+<h1 class="text-center mt-3 head">Add Expense</h1>
+
+<div class="mt-3">
+    <select class="form-control" id="Categories" name="Categories" [(ngModel)]="expenseObject.category">
+        <option *ngFor="let catlist of finalListcat;" [value]="catlist.key">{{catlist.category}}</option>
+    </select>
+</div>
+
+<div class="mt-3">
+    <input type="number" class="form-control" placeholder="Your Balance..." [(ngModel)]="expenseObject.balance"
+        required />
+</div>
+
+<div class="mt-3">
+    <input type="date" class="form-control" [(ngModel)]="expenseObject.date" required />
+</div>
+
+<div class="mt-3">
+    <textarea class="form-control" placeholder="Extra Notes..." [(ngModel)]="expenseObject.note"></textarea>
+</div>
+
+<div class="mt-3">
+    <input type="file" class="form-control">
+</div>
+
+<div class="mt-3 text-center">
+    <button type="button" class="btn btn-outline-info float-center" [routerLink]="['/expensies', walletKey]" (click)="creatExpense(item)" value="Add"><i class="fa fa-floppy-o" style="font-size: 50px;" aria-hidden="true"></i></button>
+    <!-- <input type="button" class="btn float-end update" (click)=" updateExpense()" value="Update"> -->
+</div>
