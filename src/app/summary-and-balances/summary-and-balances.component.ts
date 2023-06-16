@@ -43,7 +43,7 @@ export class SummaryAndBalancesComponent {
             categories.forEach((category: any) => {
               // Single Category = category
               if (element.category == category.key) {
-                // Same Category id compre and name replace with id in single matched with current walletkey  
+                // Same Category id compare and name replace with id in single matched with current walletkey  
                 element.category = category.category
               }
             })
@@ -77,7 +77,7 @@ export class SummaryAndBalancesComponent {
 
   remainingBalance(totalBalance: any, expenseCost: any) {
 
-    console.log("Balance Current:", totalBalance, typeof totalBalance);
+    console.log("Current Balance:", totalBalance, typeof totalBalance);
     console.log("Balance Current:", expenseCost, typeof expenseCost);
 
     this.finalList['balance'] = totalBalance - expenseCost;
